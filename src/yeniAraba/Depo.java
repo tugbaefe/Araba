@@ -1,20 +1,20 @@
 package yeniAraba;
 
-import java.util.Scanner;
-
-public class Depo implements Urunler{
-    static Scanner scan= new Scanner(System.in);
-
+public class Depo {
 
    private String marka;
    private String model;
    private int motorGucu;
    private String renk;
    private String yakit;
-   private String yakait;
 
-
-
+    public Depo(String marka, String model, int motorGucu, String renk, String yakit) {
+        this.marka = marka;
+        this.model = model;
+        this.motorGucu = motorGucu;
+        this.renk = renk;
+        this.yakit = yakit;
+    }
 
     public String getMarka() {
         return marka;
@@ -54,10 +54,5 @@ public class Depo implements Urunler{
 
     public void setYakit(String yakit) {
         this.yakit = yakit;
-    }
-
-    @Override
-    public void urunler(String marka, String model, int motorGucu, String renk, String yakit) {
-
     }
 }
