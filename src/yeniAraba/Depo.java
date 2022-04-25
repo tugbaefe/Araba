@@ -11,7 +11,7 @@ public class Depo implements Urunler{
    private int motorGucu;
    private String renk;
    private String yakit;
-   private String yakait;
+
 
 
 
