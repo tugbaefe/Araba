@@ -1,8 +1,8 @@
 package yeniAraba;
 
 public interface Satis {
-   static String marka="Toyota";
+    String marka="Toyota";
 
-    void sales(String marka, String model);
+    String sales();
 
 }
