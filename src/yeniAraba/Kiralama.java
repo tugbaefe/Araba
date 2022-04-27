@@ -2,5 +2,6 @@ package yeniAraba;
 
 public interface Kiralama {
 
-    void purchasing(String renk);
+    public void rentACar (String marka, String model, String renk);
+
 }
