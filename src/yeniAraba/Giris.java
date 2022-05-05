@@ -17,6 +17,7 @@ public class Giris implements Kiralama,Satis  {
     static String renk="";
     static String model="";
 
+
     public Giris(String marka,  ArrayList<String > modelList, String yakit, int yil) {
         this.marka = marka;
         this.modelList = modelList;
@@ -40,9 +41,10 @@ public class Giris implements Kiralama,Satis  {
                 ", vites='" + vites + '\'' +
                 '}';
     }
+
     @Override
     public String purchasing() {
-        System.out.println("Arac kiralama icin listemizden renk tercih ediniz");
+        System.out.println("Arac kiralama/satis icin listemizden renk tercih ediniz");
         System.out.println(renkList);
         String renkSecim= scan.next();
         switch (renkSecim){
@@ -65,7 +67,7 @@ public class Giris implements Kiralama,Satis  {
     }
     @Override
     public String sales() {
-        System.out.println("Arac kiralama icin listemizden model tercih ediniz");
+        System.out.println("Arac kiralama/satis icin listemizden model tercih ediniz");
         System.out.println(modelList);
         String modelSecim= scan.next();
         switch (modelSecim){

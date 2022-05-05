@@ -11,6 +11,7 @@ public class Islemler extends Giris {
 
 
 
+
     public static void menu() throws InterruptedException {
         String tercih;
             System.out.println("=============JAVA OTO=============\n" +
@@ -27,6 +28,7 @@ public class Islemler extends Giris {
                     rentACar();
                     break;
                 case "2":
+                    salesACar();
                     break;
                 case "q":
                 case "Q":
@@ -43,6 +45,79 @@ public class Islemler extends Giris {
                     menu();
             }
 
+
+
+    }
+
+    private static void salesACar() throws InterruptedException {
+        System.out.println("Yalnizca sifir Toyota marka araba satisi yapilmaktadir");
+
+        renkmodelsecim.sales();
+
+        System.out.println("Vites tercihinizi yapiniz");
+        System.out.println("1-Manuel, 2-Otomatik, 3-Yari Otomatik");
+        String tercihVites= scan.next();
+        switch (tercihVites){
+            case "1":
+                vites="Manuel";
+                break;
+            case "2":
+                vites="Otomatik";
+                break;
+            case "3":
+                vites="Yari Otomatik";
+                break;
+            default:
+                System.out.println("Hatali tercih");
+                salesACar();
+        }
+
+
+        renkmodelsecim.purchasing();
+
+        System.out.println("Yakit tercihinizi yapiniz");
+        System.out.println("1-Benzinli, 2-Dizel");
+        String tercihYakit=scan.next();
+        switch (tercihYakit){
+            case "1":
+                yakit="Benzinli";
+                break;
+            case "2":
+                yakit="Dizel";
+                break;
+            default:
+                System.out.println("Yanlis tercih");
+                salesACar();
+
+        }
+
+        Giris arabaSatis=new Giris();
+        Giris.yil=2022;
+        System.out.println("******Arac Bilgileri Hazirlaniyor******");
+        for (int i = 1; i < 30; i++) {
+            Thread.sleep(200);
+            System.out.print("*");
+
+        }
+        System.out.println(" ");
+
+        System.out.println(arabaSatis.toString());
+        for (int i = 1; i < 30; i++) {
+            Thread.sleep(200);
+            System.out.print("*");
+
+        }
+        System.out.println(" ");
+        System.out.println("Istenilen arac bilgileri dogruysa arac satisi icin bizimle iletisime geciniz");
+        System.out.println("Baska bir islem yapmak istiyorsaniz menuye donebilirsiniz");
+
+        for (int i = 1; i < 30; i++) {
+            Thread.sleep(200);
+            System.out.print("*");
+
+        }
+        System.out.println(" ");
+        menu();
 
 
     }
@@ -76,9 +151,9 @@ public class Islemler extends Giris {
         renkmodelsecim.sales();
 
 
-        System.out.println("Arac kiralama icin yakit giriniz");
+        System.out.println("Arac kiralama/satis icin yakit giriniz");
         yakit = scan.next();
-        System.out.println("Arac kiralama icin vites giriniz");
+        System.out.println("Arac kiralama/satis icin vites giriniz");
         vites = scan.next();
 
         renkmodelsecim.purchasing();
